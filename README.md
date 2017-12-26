@@ -13,6 +13,14 @@ git init
 
 edit `package.json` `name` and `version` property
 
+```
+npm i
+npm start
+```
+start server, access http://localhost:1235
+
+
+
 ## for developer this repository
 
-TODO: 
+TODO:
