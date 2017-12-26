@@ -21,6 +21,6 @@ start server, access http://localhost:1235
 
 
 
-## for developer this repository
+## for developer of this repository
 
 TODO:
