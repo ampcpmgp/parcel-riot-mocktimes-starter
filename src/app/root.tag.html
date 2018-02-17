@@ -1,7 +1,7 @@
 import riot from 'riot'
 
 <app-root>
-  <h2>{ title }</h2>
+  <h2 onClick={onH2Click}>{ title }</h2>
   <style type="less">
     :scope {
       display: flex;
@@ -13,5 +13,9 @@ import riot from 'riot'
   </style>
   <script>
     this.title = 'Hello, World'
+
+    this.onH2Click = () => {
+      console.warn('h2 clicked')
+    }
   </script>
 </app-root>
