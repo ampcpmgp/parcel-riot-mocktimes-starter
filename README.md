@@ -12,6 +12,7 @@ git init
 ```
 
 edit `package.json` `name` and `version` property
+edit `README.md` 
 
 ```
 npm i
