@@ -9,10 +9,10 @@
     "dist": "cross-env NODE_ENV=production parcel build src/index.html",
     "prestart": "run-s build:riot",
     "start": "run-p watch:**",
-    "build:riot": "riot src/app/ --ext html src/app/root.js",
-    "watch:riot": "riot -w src/app/ --ext html src/app/root.js",
-    "watch:parcel:pattern": "parcel -p 1235 -d .dev mock/__pattern__.html",
-    "watch:parcel": "parcel -d .dev mock/__index__.html"
+    "build:riot": "riot src/app --ext tag.html",
+    "watch:riot": "riot -w src/app --ext tag.html",
+    "watch:parcel:pattern": "parcel -o -p 1235 -d .dev mock/__pattern__.html",
+    "watch:parcel": "parcel -p 1234 -d .dev mock/__index__.html"
   },
   "author": "",
   "license": "ISC",

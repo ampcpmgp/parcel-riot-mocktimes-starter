@@ -12,14 +12,13 @@ git init
 ```
 
 edit `package.json` `name` and `version` property
-edit `README.md` 
+edit `README.md`
 
 ```
 npm i
 npm start
 ```
-start server, access http://localhost:1235
-
+start server, then browser open.
 
 
 ## for developer of this repository
