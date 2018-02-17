@@ -6,11 +6,18 @@ import riot from 'riot'
   <div>
     {ui.clickCount}
   </div>
+  <img src={droidKun} alt="">
   <style type="less">
     :scope {
       display: flex;
+      flex-direction: column;
       background-color: #ccc;
     }
+
+    > * {
+      width: 200px;
+    }
+
     > h2 {
       color: blue;
     }
@@ -18,9 +25,11 @@ import riot from 'riot'
   <script>
     import { observe } from 'dob'
     import ui from '~/src/state/ui'
+    import droidKun from '~/src/image/droid-kun.png'
 
     this.ui = ui
     this.title = 'Hello, World'
+    this.droidKun = droidKun
 
     observe(() => {
       this.update()
