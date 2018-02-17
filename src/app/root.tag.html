@@ -1,7 +1,11 @@
 import riot from 'riot'
 
 <app-root>
-  <h2 onClick={onH2Click}>{ title }</h2>
+  <h2>{ title }</h2>
+  <button type="button" name="button" onClick={ui.addCount}>click me</button>
+  <div>
+    {ui.clickCount}
+  </div>
   <style type="less">
     :scope {
       display: flex;
@@ -12,10 +16,14 @@ import riot from 'riot'
     }
   </style>
   <script>
+    import { observe } from 'dob'
+    import ui from '~/src/state/ui'
+
+    this.ui = ui
     this.title = 'Hello, World'
 
-    this.onH2Click = () => {
-      console.warn('h2 clicked')
-    }
+    observe(() => {
+      this.update()
+    })
   </script>
 </app-root>
