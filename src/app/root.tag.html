@@ -6,6 +6,9 @@ import riot from 'riot'
   <div>
     {ui.clickCount}
   </div>
+  <div>
+    API: {apiData}
+  </div>
   <img src={droidKun} alt="">
   <style type="less">
     :scope {
@@ -24,14 +27,31 @@ import riot from 'riot'
   </style>
   <script>
     import { observe } from 'dob'
+    import axios from 'axios'
     import ui from '~/src/state/ui'
+    import Path from '~/src/const/path'
     import droidKun from '~/src/image/droid-kun.png'
 
     this.ui = ui
     this.title = 'Hello, World'
     this.droidKun = droidKun
+    this.apiData = null
+
+    this.getApi = async () => {
+      try {
+        const {data} = await axios.get(Path.TEST)
+        this.apiData = JSON.stringify(data)
+      } catch (e) {
+        console.warn('api error')
+      }
+    }
 
     observe(() => {
+      this.update()
+    })
+
+    this.on('mount', async () => {
+      await this.getApi()
       this.update()
     })
   </script>

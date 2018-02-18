@@ -15,7 +15,7 @@ edit `package.json` `name` and `version` property
 edit `README.md`
 
 ```
-npm i
+npm i # or yarn
 npm start
 ```
 start server, then browser open.
