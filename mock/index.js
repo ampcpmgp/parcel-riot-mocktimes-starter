@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import './setup'
 import '../src/main'
 
