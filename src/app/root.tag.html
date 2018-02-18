@@ -2,9 +2,9 @@ import riot from 'riot'
 
 <app-root>
   <h2>{ title }</h2>
-  <button type="button" name="button" onClick={ui.addCount}>click me</button>
+  <button type="button" name="button" onClick={state.addCount}>click me</button>
   <div>
-    {ui.clickCount}
+    {state.clickCount}
   </div>
   <div>
     API: {apiData}
@@ -28,11 +28,11 @@ import riot from 'riot'
   <script>
     import { observe } from 'dob'
     import axios from 'axios'
-    import ui from '~/src/state/ui'
+    import state from '~/src/state'
     import Path from '~/src/const/path'
     import droidKun from '~/src/image/droid-kun.png'
 
-    this.ui = ui
+    this.state = state
     this.title = 'Hello, World'
     this.droidKun = droidKun
     this.apiData = null
