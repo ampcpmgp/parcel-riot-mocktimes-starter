@@ -2,9 +2,9 @@ import riot from 'riot'
 
 <app-root>
   <h2>{ title }</h2>
-  <button type="button" name="button" onClick={state.addCount}>click me</button>
+  <button type="button" name="button" onClick={ui.addCount}>click me</button>
   <div>
-    {state.clickCount}
+    {ui.clickCount}
   </div>
   <div>
     API: {apiData}
@@ -32,7 +32,7 @@ import riot from 'riot'
     import Path from '~/src/const/path'
     import droidKun from '~/src/image/droid-kun.png'
 
-    this.state = state
+    this.ui = state.ui
     this.title = 'Hello, World'
     this.droidKun = droidKun
     this.apiData = null
@@ -41,18 +41,23 @@ import riot from 'riot'
       try {
         const {data} = await axios.get(Path.TEST)
         this.apiData = JSON.stringify(data)
+        this.update()
       } catch (e) {
         console.warn('api error')
       }
     }
 
-    observe(() => {
-      this.update()
+    this.on('mount', () => {
+      const signal = observe(() => {
+        this.update()
+      })
+
+      this.getApi()
+
+      this.on('unmount', () => {
+        signal.unobserve()
+      })
     })
 
-    this.on('mount', async () => {
-      await this.getApi()
-      this.update()
-    })
   </script>
 </app-root>

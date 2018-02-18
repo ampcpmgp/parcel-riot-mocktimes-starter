@@ -1,10 +1,12 @@
 import { observable } from 'dob'
 
-const ui = observable({
-  clickCount: 0,
-  addCount () {
-    ++ui.clickCount
+const state = observable({
+  ui: {
+    clickCount: 0,
+    addCount () {
+      ++state.ui.clickCount
+    }
   }
 })
 
-export default ui
+export default state
