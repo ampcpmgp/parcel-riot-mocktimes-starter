@@ -1,7 +1,11 @@
+import 'babel-polyfill'
+import './setup'
 import '../src/main'
 
-module.hot.accept(() => {
-  window.location.reload()
-})
+if (module.hot) {
+  module.hot.accept(() => {
+    window.location.reload()
+  })
+}
 
 console.info('finished')
