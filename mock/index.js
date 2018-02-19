@@ -1,4 +1,5 @@
-import './setup'
+import 'babel-polyfill'
+import './config'
 import '../src/main'
 
 if (module.hot) {
