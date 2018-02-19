@@ -30,11 +30,11 @@ import riot from 'riot'
     import { observe } from 'dob'
     import axios from 'axios'
     import './parts/header'
-    import state from '../state'
+    import ui from '../state/ui'
     import Path from '../const/path'
     import droidKun from '../images/droid-kun.png'
 
-    this.ui = state.ui
+    this.ui = ui
     this.title = 'Hello, World'
     this.droidKun = droidKun
     this.apiData = null
