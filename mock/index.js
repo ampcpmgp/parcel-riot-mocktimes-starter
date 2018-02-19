@@ -6,5 +6,3 @@ if (module.hot) {
     window.location.reload()
   })
 }
-
-console.info('finished')

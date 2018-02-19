@@ -1,6 +1,7 @@
 import riot from 'riot'
 
 <app-root>
+  <parts-header></parts-header>
   <h2>{ title }</h2>
   <button type="button" name="button" onClick={ui.addCount}>click me</button>
   <div>
@@ -17,7 +18,7 @@ import riot from 'riot'
       border: 1px solid;
     }
 
-    > * {
+    > button, > img {
       width: 200px;
     }
 
@@ -28,6 +29,7 @@ import riot from 'riot'
   <script>
     import { observe } from 'dob'
     import axios from 'axios'
+    import './parts/header'
     import state from '~/src/state'
     import Path from '~/src/const/path'
     import droidKun from '~/src/images/droid-kun.png'
