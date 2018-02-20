@@ -1,7 +1,7 @@
 import riot from 'riot'
 
 <app-root>
-  <parts-header></parts-header>
+  <parts-header if={ui.clickCount % 3}></parts-header>
   <h2>{ title }</h2>
   <button type="button" name="button" onClick={ui.addCount}>click me</button>
   <div>
@@ -27,8 +27,8 @@ import riot from 'riot'
     }
   </style>
   <script>
-    import { observe } from 'dob'
     import axios from 'axios'
+    import onChange from 'on-change'
     import './parts/header'
     import ui from '../state/ui'
     import Path from '../const/path'
@@ -50,14 +50,12 @@ import riot from 'riot'
     }
 
     this.on('mount', () => {
-      const signal = observe(() => {
-        this.update()
-      })
+      this.ui = onChange(ui, () => console.log(ui))
 
       this.getApi()
 
       this.on('unmount', () => {
-        signal.unobserve()
+        this.ui = null
       })
     })
 

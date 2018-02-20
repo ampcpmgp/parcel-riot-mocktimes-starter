@@ -10,4 +10,12 @@ import riot from 'riot'
       background-color: #555;
     }
   </style>
+  <script>
+    import ui from '../../state/ui'
+    this.ui = onChange(ui, () => console.log(1, this.ui, ui))
+
+    this.on('mount', () => {
+      this.ui.addCount()
+    })
+  </script>
 </parts-header>
