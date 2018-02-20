@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@nx-js/observer-util@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@nx-js/observer-util/-/observer-util-4.1.1.tgz#f36e49a4d3f1a4c29c9b5e6555cbc56726491ee7"
+
 "@simple-dom/document@^1.4.0-alpha.82914663":
   version "1.4.0-alpha.82914663"
   resolved "https://registry.yarnpkg.com/@simple-dom/document/-/document-1.4.0-alpha.82914663.tgz#a88f70743ffe2dee664bc3e7be8657268229d3d1"
@@ -3428,10 +3432,6 @@ object.pick@^1.3.0:
   resolved "https://registry.yarnpkg.com/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
   dependencies:
     isobject "^3.0.1"
-
-on-change@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/on-change/-/on-change-0.1.0.tgz#60c4e2a2b64536bae641d672d51a371b3f230482"
 
 on-finished@~2.3.0:
   version "2.3.0"

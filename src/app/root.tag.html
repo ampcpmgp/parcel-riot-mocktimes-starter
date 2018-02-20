@@ -1,7 +1,7 @@
 import riot from 'riot'
 
 <app-root>
-  <parts-header if={ui.clickCount % 3}></parts-header>
+  <parts-header if={ui.clickCount % 5}></parts-header>
   <h2>{ title }</h2>
   <button type="button" name="button" onClick={ui.addCount}>click me</button>
   <div>
@@ -18,6 +18,10 @@ import riot from 'riot'
       border: 1px solid;
     }
 
+    > button {
+      height: 60px;
+    }
+
     > button, > img {
       width: 200px;
     }
@@ -28,13 +32,12 @@ import riot from 'riot'
   </style>
   <script>
     import axios from 'axios'
-    import onChange from 'on-change'
     import './parts/header'
-    import ui from '../state/ui'
+    import state from '../state'
     import Path from '../const/path'
     import droidKun from '../images/droid-kun.png'
 
-    this.ui = ui
+    this.ui = state.ui
     this.title = 'Hello, World'
     this.droidKun = droidKun
     this.apiData = null
@@ -50,8 +53,6 @@ import riot from 'riot'
     }
 
     this.on('mount', () => {
-      this.ui = onChange(ui, () => console.log(ui))
-
       this.getApi()
 
       this.on('unmount', () => {
