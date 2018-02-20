@@ -11,7 +11,7 @@ delete `.git` directory
 git init
 ```
 
-edit `package.json` `name` and `version` property
+edit `package.json` `name` and `version` property  
 edit `README.md`
 
 ```
