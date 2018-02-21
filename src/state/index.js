@@ -1,4 +1,4 @@
-import { observable } from '@nx-js/observer-util'
+import { observable } from 'dob'
 
 const state = observable({
   ui: {

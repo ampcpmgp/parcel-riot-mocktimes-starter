@@ -1,7 +1,7 @@
 import riot from 'riot'
 
 <parts-header>
-  <span>menu {clickCount} {clickHistory.length}</span>
+  <span>menu {clickCount} / {clickHistory.length}</span>
   <style type="less">
     :scope {
       display: flex;
@@ -11,10 +11,10 @@ import riot from 'riot'
     }
   </style>
   <script>
-    import { observe, unobserve } from '@nx-js/observer-util'
+    import { observe } from 'dob'
     import state from '../../state'
 
-    const uiObserver = observe(() => {
+    const uiSignal = observe(() => {
       this.update({
         clickCount: state.ui.clickCount,
         clickHistory: state.ui.clickHistory
@@ -22,7 +22,7 @@ import riot from 'riot'
     })
 
     this.on('unmount', () => {
-      unobserve(uiObserver)
+      uiSignal.unobserve()
     })
   </script>
 </parts-header>
