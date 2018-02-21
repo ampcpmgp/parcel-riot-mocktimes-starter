@@ -1,10 +1,12 @@
 import riot from 'riot'
 
 <parts-header>
-  <span>menu {clickCount} / {clickHistory.length}</span>
+  <span onclick={addCount}>menu</span>
+  <span>{clickCount} / {clickHistory.length}</span>
   <style type="less">
     :scope {
       display: flex;
+      flex-direction: column;
       width: 100%;
       color: white;
       background-color: #555;
@@ -13,16 +15,20 @@ import riot from 'riot'
   <script>
     import { observe } from 'dob'
     import state from '../../state'
+    import {
+      addCount
+    } from '../../actions'
 
-    const uiSignal = observe(() => {
-      this.update({
-        clickCount: state.ui.clickCount,
-        clickHistory: state.ui.clickHistory
-      })
+    Object.assign(this, {
+      clickCount: state.ui.clickCount,
+      clickHistory: state.ui.clickHistory,
+      addCount
     })
 
-    this.on('unmount', () => {
-      uiSignal.unobserve()
+    observe(() => {
+      this.update({
+        clickCount: state.ui.clickCount
+      })
     })
   </script>
 </parts-header>

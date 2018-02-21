@@ -1,11 +1,10 @@
 import riot from 'riot'
 
 <app-root>
-  <parts-header if={ui.clickCount % 5}></parts-header>
-  <h2>{ title }</h2>
-  <button type="button" name="button" onClick={ui.addCount}>click me</button>
+  <parts-header></parts-header>
+  <h2>{title}</h2>
   <div>
-    {ui.clickCount}
+    {clickCount}
   </div>
   <div>
     API: {apiData}
@@ -18,11 +17,7 @@ import riot from 'riot'
       border: 1px solid;
     }
 
-    > button {
-      height: 60px;
-    }
-
-    > button, > img {
+    > img {
       width: 200px;
     }
 
@@ -31,16 +26,19 @@ import riot from 'riot'
     }
   </style>
   <script>
+    import { observe } from 'dob'
     import axios from 'axios'
     import './parts/header'
     import state from '../state'
     import Path from '../const/path'
     import droidKun from '../images/droid-kun.png'
 
-    this.ui = state.ui
-    this.title = 'Hello, World'
-    this.droidKun = droidKun
-    this.apiData = null
+    Object.assign(this, {
+      title: 'Hello, World',
+      droidKun,
+      apiData: null,
+      clickCount: state.ui.clickCount
+    })
 
     this.getApi = async () => {
       try {
@@ -52,9 +50,14 @@ import riot from 'riot'
       }
     }
 
+    observe(() => {
+      this.update({
+        clickCount: state.ui.clickCount
+      })
+    })
+
     this.on('mount', () => {
       this.getApi()
     })
-
   </script>
 </app-root>

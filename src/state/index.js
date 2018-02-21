@@ -3,11 +3,7 @@ import { observable } from 'dob'
 const state = observable({
   ui: {
     clickCount: 0,
-    clickHistory: [],
-    addCount () {
-      ++state.ui.clickCount
-      state.ui.clickHistory.push(1)
-    }
+    clickHistory: []
   },
   nest: {
     a: 1,
