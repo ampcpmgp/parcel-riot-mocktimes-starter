@@ -7,7 +7,6 @@ const state = observable({
     addCount () {
       ++state.ui.clickCount
       state.ui.clickHistory.push(1)
-      console.log(state.ui.clickCount, state.ui.clickHistory.length)
     }
   },
   nest: {

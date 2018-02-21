@@ -12,17 +12,13 @@ import riot from 'riot'
   </style>
   <script>
     import { observe, unobserve } from '@nx-js/observer-util'
-    import { debounce } from 'lodash'
     import state from '../../state'
 
     const uiObserver = observe(() => {
-      console.log('aiueo')
-      debounce(() => {
-        this.update({
-          clickCount: state.ui.clickCount,
-          clickHistory: state.ui.clickHistory
-        })
-      }, 1000)
+      this.update({
+        clickCount: state.ui.clickCount,
+        clickHistory: state.ui.clickHistory
+      })
     })
 
     this.on('unmount', () => {
