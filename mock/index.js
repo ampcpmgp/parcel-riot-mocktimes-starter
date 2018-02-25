@@ -1,6 +1,6 @@
 import 'babel-polyfill'
-import './config'
-import '../src/main'
+import config from './config'
+import start from '../src/main'
 
 if (module.hot) {
   module.hot.accept(() => {
@@ -10,3 +10,5 @@ if (module.hot) {
 }
 
 console.clear()
+config()
+start()

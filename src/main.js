@@ -4,4 +4,6 @@ import 'normalize.css'
 import './main.css'
 import './app/root'
 
-riot.mount('app-root')
+export default () => {
+  riot.mount('app-root')
+}
