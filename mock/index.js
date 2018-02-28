@@ -1,6 +1,6 @@
 import 'babel-polyfill'
 import config from './config'
-import start from '../src/main'
+import start from '~/src/main'
 
 if (module.hot) {
   module.hot.accept(() => {

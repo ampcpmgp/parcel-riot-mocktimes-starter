@@ -35,7 +35,8 @@
     "rimraf": "^2.6.2",
     "riot": "^3.9.0",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "wavy": "^1.0.4"
   },
   "standard": {
     "globals": [
