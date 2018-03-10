@@ -1,3 +1,7 @@
-import start from './main'
+import 'babel-polyfill'
+import riot from 'riot'
+import 'normalize.css'
+import './main.css'
+import './app/root'
 
-start()
+riot.mount('app-root')
