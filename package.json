@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "am-coffee-time": "^0.10.8",
+    "am-coffee-time": "^1.0.2",
     "axios": "^0.17.1",
     "axios-mock-adapter": "^1.13.1",
     "babel-polyfill": "^6.26.0",
