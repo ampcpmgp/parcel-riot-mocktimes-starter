@@ -8,7 +8,7 @@
     "dist": "run-s dist:*",
     "dist:clean": "rimraf dist",
     "dist:build": "parcel build src/index.html",
-    "lint": "standard --verbose | snazzy && standard --verbose | snazzy src/app/**/*.tag.html",
+    "lint": "standard --verbose | snazzy && standard src/app/**/*.tag.html --verbose | snazzy",
     "prestart": "run-s build:riot",
     "start": "run-p watch:**",
     "build:riot": "riot src/app --ext tag.html",
