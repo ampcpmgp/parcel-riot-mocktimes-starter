@@ -1,10 +1,10 @@
-# parcel-riot-coffee-time-starter
+# parcel-riot-mocktimes-starter
 
 
 ## for use as starter-kit
 
 ```
-git clone https://github.com/ampcpmgp/parcel-riot-coffee-time-starter
+git clone https://github.com/ampcpmgp/parcel-riot-mocktimes-starter
 ```
 delete `.git` directory
 ```

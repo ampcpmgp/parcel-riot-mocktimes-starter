@@ -1,5 +1,5 @@
 {
-  "name": "parcel-riot-coffee-time-starter",
+  "name": "parcel-riot-mocktimes-starter",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -12,13 +12,13 @@
     "prestart": "run-s build:riot",
     "start": "run-p watch:**",
     "build:riot": "riot src/app --ext tag.html",
-    "watch:mock": "am-coffee-time watch",
+    "watch:mock": "am-mocktimes watch",
     "watch:riot": "chokidar \"src/app/**/*.tag.html\" -c \"riot {path} --ext tag.html\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "am-coffee-time": "^1.0.2",
+    "am-mocktimes": "^1.0.13",
     "axios": "^0.17.1",
     "axios-mock-adapter": "^1.13.1",
     "babel-polyfill": "^6.26.0",
@@ -42,5 +42,6 @@
     "plugins": [
       "riot"
     ]
-  }
+  },
+  "dependencies": {}
 }
