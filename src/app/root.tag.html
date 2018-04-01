@@ -29,7 +29,7 @@ import riot from 'riot'
     import { observe } from 'dob'
     import axios from 'axios'
     import './parts/header'
-    import state from '../state'
+    import ui from '../state/ui'
     import Path from '../const/path'
     import droidKun from '../images/droid-kun.png'
 
@@ -37,7 +37,7 @@ import riot from 'riot'
       title: 'Hello, World',
       droidKun,
       apiData: null,
-      clickCount: state.ui.clickCount
+      clickCount: ui.clickCount
     })
 
     this.getApi = async () => {
@@ -52,7 +52,7 @@ import riot from 'riot'
 
     observe(() => {
       this.update({
-        clickCount: state.ui.clickCount
+        clickCount: ui.clickCount
       })
     })
 

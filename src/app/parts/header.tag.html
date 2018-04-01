@@ -14,20 +14,17 @@ import riot from 'riot'
   </style>
   <script>
     import { observe } from 'dob'
-    import state from '../../state'
-    import {
-      addCount
-    } from '../../actions'
+    import ui, * as uiAction from '../../state/ui'
 
     Object.assign(this, {
-      clickCount: state.ui.clickCount,
-      clickHistory: state.ui.clickHistory,
-      addCount
+      clickCount: ui.clickCount,
+      clickHistory: ui.clickHistory,
+      addCount: uiAction.addCount
     })
 
     observe(() => {
       this.update({
-        clickCount: state.ui.clickCount
+        clickCount: ui.clickCount
       })
     })
   </script>
