@@ -18,7 +18,8 @@ edit `README.md`
 npm i
 npm start
 ```
-start server, then browser open.
+
+access //localhost:1234
 
 
 ## for developer of this repository
