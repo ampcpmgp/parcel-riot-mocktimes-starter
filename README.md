@@ -11,6 +11,7 @@ delete `.git` directory
 git init
 ```
 
+edit `parcel-riot-mocktimes-starter/` dir name
 edit `package.json` `name` and `version` property  
 edit `README.md`
 
