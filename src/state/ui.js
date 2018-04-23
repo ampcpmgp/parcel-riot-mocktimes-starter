@@ -5,7 +5,7 @@ const ui = observable({
   clickHistory: []
 })
 
-export const addCount = Action(() => {
+export const addCount = () => Action(() => {
   ++ui.clickCount
   ui.clickHistory.push(1)
 })
