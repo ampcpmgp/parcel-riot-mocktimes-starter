@@ -1,4 +1,4 @@
-import { observable, observe, Action } from 'dob'
+import { observable, Action } from 'dob'
 
 const ui = observable({
   clickCount: 0,
