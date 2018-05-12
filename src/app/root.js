@@ -8,7 +8,7 @@ let self
 
 const getApi = async () => {
   try {
-    const {data} = await axios.get(Path.TEST)
+    const { data } = await axios.get(Path.TEST)
     self.apiData = JSON.stringify(data)
     self.update()
   } catch (e) {
@@ -16,8 +16,7 @@ const getApi = async () => {
   }
 }
 
-
-export default (_self) => {
+export default _self => {
   self = _self
 
   Object.assign(self, {

@@ -3,7 +3,7 @@ import ui, * as uiAction from '../../state/ui'
 
 let self
 
-export default (_self) => {
+export default _self => {
   self = _self
 
   Object.assign(self, {
