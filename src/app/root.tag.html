@@ -27,37 +27,7 @@ import './parts/header.tag'
     }
   </style>
   <script>
-    import { observe } from 'dob'
-    import axios from 'axios'
-    import ui from '../state/ui'
-    import Path from '../const/path'
-    import droidKun from '../images/droid-kun.png'
-
-    Object.assign(this, {
-      title: 'Hello, World',
-      droidKun,
-      apiData: null,
-      clickCount: ui.clickCount
-    })
-
-    this.getApi = async () => {
-      try {
-        const {data} = await axios.get(Path.TEST)
-        this.apiData = JSON.stringify(data)
-        this.update()
-      } catch (e) {
-        console.warn('api error')
-      }
-    }
-
-    observe(() => {
-      this.update({
-        clickCount: ui.clickCount
-      })
-    })
-
-    this.on('mount', () => {
-      this.getApi()
-    })
+    import Root from './root'
+    new Root(this)
   </script>
 </app-root>
