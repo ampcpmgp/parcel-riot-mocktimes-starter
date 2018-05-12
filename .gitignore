@@ -2,4 +2,4 @@
 .cache/
 dist/
 node_modules/
-src/app/**/*.js
+src/app/**/*.tag.js

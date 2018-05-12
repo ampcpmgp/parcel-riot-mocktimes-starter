@@ -11,14 +11,14 @@
     "lint": "standard --verbose | snazzy && standard src/app/**/*.tag.html --verbose | snazzy",
     "prestart": "run-s build:riot",
     "start": "run-p watch:**",
-    "build:riot": "riot src/app --ext tag.html",
-    "watch:mock": "am-mocktimes watch -r",
-    "watch:riot": "chokidar \"src/app/**/*.tag.html\" -c \"riot {path} --ext tag.html\""
+    "build:riot": "riot src/app --ext html",
+    "watch:mock": "am-mocktimes watch",
+    "watch:riot": "chokidar \"src/app/**/*.tag.html\" -c \"riot {path} --ext html\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "am-mocktimes": "^1.0.20",
+    "am-mocktimes": "^1.1.0",
     "axios": "^0.17.1",
     "axios-mock-adapter": "^1.13.1",
     "babel-polyfill": "^6.26.0",
