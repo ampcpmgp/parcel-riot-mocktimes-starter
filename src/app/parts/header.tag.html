@@ -13,19 +13,7 @@ import riot from 'riot'
     }
   </style>
   <script>
-    import { observe } from 'dob'
-    import ui, * as uiAction from '../../state/ui'
-
-    Object.assign(this, {
-      clickCount: ui.clickCount,
-      clickHistory: ui.clickHistory,
-      addCount: uiAction.addCount
-    })
-
-    observe(() => {
-      this.update({
-        clickCount: ui.clickCount
-      })
-    })
+    import Header from './header'
+    new Header(this)
   </script>
 </parts-header>
