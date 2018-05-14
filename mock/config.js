@@ -12,3 +12,5 @@ mockAdapter.onGet(Path.TEST).reply(200, {
 mock({
   uiAction
 })
+
+require('../src/app/root.tag') // for hot reload
