@@ -23,7 +23,7 @@ export default self => {
     clickCount: ui.clickCount
   })
 
-  observe(() => {
+  const signal = observe(() => {
     self.update({
       clickCount: ui.clickCount
     })
@@ -31,5 +31,9 @@ export default self => {
 
   self.on('mount', () => {
     self.getApi()
+  })
+
+  self.on('unmount', () => {
+    signal.unobserve()
   })
 }

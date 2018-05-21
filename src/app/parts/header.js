@@ -8,9 +8,13 @@ export default self => {
     addCount: uiAction.addCount
   })
 
-  observe(() => {
+  const signal = observe(() => {
     self.update({
       clickCount: ui.clickCount
     })
+  })
+
+  self.on('unmount', () => {
+    signal.unobserve()
   })
 }
