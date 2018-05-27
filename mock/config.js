@@ -13,4 +13,4 @@ mock({
   uiAction
 })
 
-require('../src/app/root.tag') // for hot reload
+require('../src/app') // for hot reload
