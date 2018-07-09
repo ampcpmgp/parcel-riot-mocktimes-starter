@@ -5,13 +5,12 @@
 
 ```
 git clone https://github.com/ampcpmgp/parcel-riot-mocktimes-starter
-```
-delete `.git` directory
-```
+mv parcel-riot-mocktimes-starter YOUR_PROJECT_NAME
+cd YOUR_PROJECT_NAME
+rm -rf .git
 git init
 ```
 
-edit `parcel-riot-mocktimes-starter/` dir name
 edit `package.json` `name` and `version` property  
 edit `README.md`
 
@@ -19,9 +18,6 @@ edit `README.md`
 npm i
 npm start
 ```
-
-access //localhost:1234
-
 
 ## for developer of this repository
 
