@@ -12,6 +12,7 @@
     "precommit": "lint-staged",
     "prestart": "run-s build:riot",
     "start": "run-p watch:**",
+    "clean:riot": "rimraf src/app/**/*.tag.js",
     "build:riot": "riot src/app --ext html",
     "watch:mock": "am-mocktimes watch",
     "watch:riot": "chokidar \"src/app/**/*.tag.html\" -c \"riot {path} --ext html\""
