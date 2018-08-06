@@ -10,7 +10,7 @@
     "dist:build": "parcel build src/index.html",
     "lint": "standard --verbose | snazzy && standard src/app/**/*.tag.html --verbose | snazzy",
     "precommit": "lint-staged",
-    "prestart": "run-s build:riot",
+    "prestart": "run-s clean:riot build:riot",
     "start": "run-p watch:**",
     "clean:riot": "rimraf src/app/**/*.tag.js",
     "build:riot": "riot src/app --ext html",
