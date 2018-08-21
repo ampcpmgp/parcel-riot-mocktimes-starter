@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "run-s dist:*",
+    "dist": "run-s build:riot dist:*",
+    "dist-dev": "run-s build:riot dist-dev:*",
     "dist:clean": "rimraf dist",
+    "dist-dev:clean": "rimraf dist-no-minified",
     "dist:build": "parcel build src/index.html",
+    "dist-dev:build": "parcel build src/index.html --out-dir=dist-no-minified --no-minify",
     "lint": "standard --verbose | snazzy && standard src/app/**/*.tag.html --verbose | snazzy",
     "precommit": "lint-staged",
     "prestart": "run-s clean:riot build:riot",

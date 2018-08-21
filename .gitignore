@@ -1,5 +1,6 @@
 .am-mocktimes/
 .cache/
 dist/
+dist-no-minified/
 node_modules/
 src/app/**/*.tag.js
