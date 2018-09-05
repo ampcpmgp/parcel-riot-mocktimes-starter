@@ -1,6 +1,5 @@
 # parcel-riot-mocktimes-starter
 
-
 ## for use as starter-kit
 
 ```shell
@@ -11,11 +10,11 @@ rm -rf .git
 git init
 ```
 
-edit `package.json` `name` and `version` property  
+edit `package.json` `name` and `version` property
 edit `README.md`
 
 ```shell
-npm i
+yarn
 npm start
 ```
 

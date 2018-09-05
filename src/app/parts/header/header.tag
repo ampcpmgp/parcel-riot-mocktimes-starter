@@ -1,5 +1,3 @@
-import riot from 'riot'
-
 <parts-header>
   <span onclick={addCount}>menu</span>
   <span>{clickCount} / {clickHistory.length}</span>
@@ -13,7 +11,7 @@ import riot from 'riot'
     }
   </style>
   <script>
-    import header from './header'
+    import header from './header.js'
     header(this)
   </script>
 </parts-header>

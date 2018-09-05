@@ -1,6 +1,6 @@
 {
   "name": "parcel-riot-mocktimes-starter",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,28 +11,23 @@
     "dist-dev:clean": "rimraf dist-no-minified",
     "dist:build": "parcel build src/index.html",
     "dist-dev:build": "parcel build src/index.html --out-dir=dist-no-minified --no-minify",
-    "lint": "standard --verbose | snazzy && standard src/app/**/*.tag.html --verbose | snazzy",
+    "lint": "standard --verbose | snazzy",
     "precommit": "lint-staged",
-    "prestart": "run-s clean:riot build:riot",
-    "start": "run-p watch:**",
-    "clean:riot": "rimraf src/app/**/*.tag.js",
-    "build:riot": "riot src/app --ext html",
-    "watch:mock": "am-mocktimes watch",
-    "watch:riot": "chokidar \"src/app/**/*.tag.html\" -c \"riot {path} --ext html\""
+    "start": "am-mocktimes watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "am-mocktimes": "^1.2.4",
+    "am-mocktimes": "^1.4.0",
     "axios-mock-adapter": "^1.15.0",
     "chokidar-cli": "^1.2.0",
     "cross-env": "^5.1.6",
-    "eslint-plugin-riot": "^0.1.7",
     "husky": "^0.14.3",
     "less": "^3.0.4",
     "lint-staged": "^7.1.2",
     "npm-run-all": "^4.1.3",
     "parcel-bundler": "^1.9.4",
+    "parcel-plugin-tag": "^1.0.1",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
     "snazzy": "^7.1.1",
@@ -41,9 +36,6 @@
   "standard": {
     "globals": [
       "opts"
-    ],
-    "plugins": [
-      "riot"
     ]
   },
   "lint-staged": {
@@ -62,6 +54,7 @@
     "babel-polyfill": "^6.26.0",
     "dob": "^2.5.8",
     "normalize.css": "^8.0.0",
+    "npm": "^6.4.1",
     "riot": "^3.10.1"
   }
 }

@@ -1,6 +1,3 @@
-import riot from 'riot'
-import './parts/header/header.tag'
-
 <app-root>
   <parts-header></parts-header>
   <h2>{title}</h2>
@@ -26,7 +23,8 @@ import './parts/header/header.tag'
     }
   </style>
   <script>
-    import root from './root'
+    import './parts/header/header.tag'
+    import root from './root.js'
     root(this)
   </script>
 </app-root>
