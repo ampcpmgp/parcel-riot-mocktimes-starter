@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "run-s build:riot dist:*",
-    "dist-dev": "run-s build:riot dist-dev:*",
+    "dist": "run-s dist:*",
+    "dist-dev": "run-s dist-dev:*",
     "dist:clean": "rimraf dist",
     "dist-dev:clean": "rimraf dist-no-minified",
     "dist:build": "parcel build src/index.html",
