@@ -11,7 +11,7 @@
     }
   </style>
   <script>
-    import header from './header.js'
-    header(this)
+    import Mixin from './mixin.js'
+    this.mixin(Mixin)
   </script>
 </parts-header>

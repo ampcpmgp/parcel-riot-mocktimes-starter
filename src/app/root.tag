@@ -1,3 +1,5 @@
+import './parts/header'
+
 <app-root>
   <parts-header></parts-header>
   <h2>{title}</h2>
@@ -23,8 +25,8 @@
     }
   </style>
   <script>
-    import './parts/header/header.tag'
-    import root from './root.js'
-    root(this)
+    import Mixin from './mixin.js'
+
+    this.mixin(Mixin)
   </script>
 </app-root>
