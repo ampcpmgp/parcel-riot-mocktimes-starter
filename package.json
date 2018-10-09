@@ -13,7 +13,8 @@
     "dist-dev:build": "parcel build src/index.html --out-dir=dist-no-minified --no-minify",
     "lint": "standard --verbose | snazzy",
     "precommit": "lint-staged",
-    "start": "am-mocktimes watch"
+    "start": "am-mocktimes watch",
+    "screenshot": "am-mocktimes screenshot"
   },
   "author": "",
   "license": "ISC",
