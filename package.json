@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "run-s dist:*",
-    "dist-dev": "run-s dist-dev:*",
     "dist:clean": "rimraf dist",
-    "dist-dev:clean": "rimraf dist-no-minified",
     "dist:build": "parcel build src/index.html --public-url=./",
+    "dist-dev": "run-s dist-dev:*",
+    "dist-dev:clean": "rimraf dist-no-minified",
     "dist-dev:build": "parcel build src/index.html --out-dir=dist-no-minified --no-minify --public-url=./",
     "lint": "standard --verbose | snazzy",
     "precommit": "lint-staged",
