@@ -10,7 +10,7 @@ rm -rf .git
 git init
 ```
 
-edit `package.json` `name` and `version` property
+edit `package.json` `name` and `version` property  
 edit `README.md`
 
 ```shell
@@ -20,4 +20,8 @@ npm start
 
 ## for developer of this repository
 
-TODO:
+```shell
+git clone https://github.com/ampcpmgp/parcel-riot-mocktimes-starter
+yarn
+npm start
+```
