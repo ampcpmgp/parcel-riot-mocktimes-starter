@@ -14,13 +14,21 @@
     "lint": "standard --verbose | snazzy",
     "precommit": "lint-staged",
     "start": "am-mocktimes watch",
-    "screenshot": "am-mocktimes screenshot"
+    "screenshot": "am-mocktimes screenshot",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@storybook/addon-knobs": "^4.0.6",
+    "@storybook/addon-viewport": "^4.0.6",
+    "@storybook/addons": "^4.0.6",
+    "@storybook/riot": "^4.0.6",
     "am-mocktimes": "^1.4.0",
     "axios-mock-adapter": "^1.15.0",
+    "babel-loader": "^8.0.4",
     "cross-env": "^5.1.6",
     "husky": "^0.14.3",
     "less": "^3.0.4",
@@ -30,6 +38,7 @@
     "parcel-plugin-tag": "^1.0.1",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
+    "riot-tag-loader": "^2.1.0",
     "snazzy": "^7.1.1",
     "standard": "^10.0.3"
   },
