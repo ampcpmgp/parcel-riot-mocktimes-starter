@@ -1,6 +1,9 @@
 <parts-header>
-  <span onclick={addCount}>menu</span>
+  <span onclick="{addCount}">menu</span>
   <span>{clickCount} / {clickHistory.length}</span>
+  <span if="{opts.testData}">
+    {typeof opts.testData} -> {opts.testData}
+  </span>
   <style type="less">
     :scope {
       display: flex;
