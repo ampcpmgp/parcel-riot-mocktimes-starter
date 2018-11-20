@@ -1,7 +1,7 @@
 import { observe } from 'dob'
 import axios from 'axios'
-import ui from '../state/ui'
-import Path from '../const/path'
+import ui from '../../../state/ui'
+import Path from '../../../const/path'
 
 export default {
   title: 'Hello, World',

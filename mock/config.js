@@ -10,7 +10,11 @@ mockAdapter.onGet(Path.TEST).reply(200, {
 })
 
 mock({
-  uiAction
+  uiAction,
+
+  page (name) {
+    window.history.replaceState(null, null, name)
+  }
 })
 
 require('../src/app') // for hot reload
