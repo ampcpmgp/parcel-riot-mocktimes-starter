@@ -6557,9 +6557,10 @@ parcel-bundler@^1.9.4, parcel-bundler@^1.9.7:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-tag@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-tag/-/parcel-plugin-tag-1.0.1.tgz#859ddaa34fd235ecfd48eb58036cf2245498d71b"
+parcel-plugin-tag@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-tag/-/parcel-plugin-tag-1.1.0.tgz#ed8231bbc9305a9d44b762489b0b8c6d4a483956"
+  integrity sha512-QnGzWCQqcvMZOVwbMLK8yfxWngPBJm+Y3SDjnHYFJ7rcaO6WnuYp1gNXMT6MS71/fIsgKoNY4W7cXPXgaVq1gA==
   dependencies:
     parcel-bundler "^1.9.7"
     riot "^3.12.0"
