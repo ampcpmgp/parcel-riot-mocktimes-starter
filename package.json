@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "start": "am-mocktimes watch",
     "screenshot": "am-mocktimes screenshot",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./src",
     "build-storybook": "build-storybook"
   },
   "author": "",

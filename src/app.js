@@ -5,6 +5,6 @@ import 'normalize.css'
 import './main.css'
 import './tags/app-root.tag'
 
+riot.mount('app-root')
 route.base('/')
 route.exec()
-riot.mount('app-root')
