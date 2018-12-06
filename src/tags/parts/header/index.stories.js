@@ -13,6 +13,7 @@ storiesOf('Header', module)
   .addDecorator(withKnobs)
   .add('normal', () =>
     mount('parts-header', {
-      testData: number('testData', 4)
+      handleMenuClick: console.info,
+      clickCount: number('clickCount', 0)
     })
   )
