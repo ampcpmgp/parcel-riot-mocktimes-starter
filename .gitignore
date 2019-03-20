@@ -1,4 +1,5 @@
 .am-mocktimes/
+.am-mocktimes-img/
 .cache/
 dist/
 dist-no-minified/
