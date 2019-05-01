@@ -9,7 +9,7 @@ rm -rf .git
 git init
 ```
 
-edit `package.json` `name` and `version` property  
+edit `package.json` `name` and `version` property
 edit `README.md`
 
 ```shell
