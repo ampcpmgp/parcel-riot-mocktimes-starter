@@ -4,3 +4,4 @@
 dist/
 dist-no-minified/
 node_modules/
+yarn-error.log

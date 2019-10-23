@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
     "dist": "run-s dist:*",
     "dist:clean": "rimraf dist",
     "dist:build": "parcel build src/index.html --public-url=./",
@@ -30,8 +30,10 @@
     "@storybook/riot": "^4.0.6",
     "am-mocktimes": "^2.0.1",
     "am-mocktimes-addon-screenshot": "0.0.2",
+    "ava": "^2.4.0",
     "axios-mock-adapter": "^1.15.0",
     "babel-loader": "^8.0.4",
+    "esm": "^3.2.25",
     "husky": "^0.14.3",
     "less": "^3.0.4",
     "lint-staged": "^7.1.2",
@@ -43,6 +45,14 @@
     "riot-tag-loader": "^2.1.0",
     "snazzy": "^7.1.1",
     "standard": "^10.0.3"
+  },
+  "ava": {
+    "files": [
+      "src/states/**/*.test.js"
+    ],
+    "require": [
+      "esm"
+    ]
   },
   "standard": {
     "globals": [
