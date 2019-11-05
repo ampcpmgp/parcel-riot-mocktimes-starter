@@ -13,7 +13,7 @@ edit `package.json` `name` and `version` property
 edit `README.md`
 
 ```shell
-yarn
+npm i
 npm start
 ```
 
@@ -21,6 +21,6 @@ npm start
 
 ```shell
 git clone https://github.com/ampcpmgp/parcel-riot-mocktimes-starter
-yarn
+npm i
 npm start
 ```

@@ -1,7 +1,7 @@
 import { mount, storiesOf } from '@storybook/riot'
 import { withKnobs, number } from '@storybook/addon-knobs'
 import { withBackgrounds } from '@storybook/addon-backgrounds'
-import './index.tag'
+import './index.riot'
 
 storiesOf('Header', module)
   .addDecorator(
