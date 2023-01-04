@@ -27,7 +27,7 @@
     "@storybook/addon-storysource": "^4.0.11",
     "@storybook/addon-viewport": "^4.0.6",
     "@storybook/addons": "^4.0.6",
-    "@storybook/riot": "^4.0.6",
+    "@storybook/riot": "^6.2.9",
     "am-mocktimes": "^2.0.1",
     "am-mocktimes-addon-screenshot": "0.0.2",
     "ava": "^2.4.0",
